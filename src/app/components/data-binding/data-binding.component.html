@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-6">
+        1.Interpolation
+
+        <p> firstName =>   {{firstName}}</p>
+        <div>
+            {{rollNo}}
+        </div>
+        <span>
+            {{isActive}}
+        </span>
+
+    </div>
+    <div class="col-6">
+        2.Property Binding
+        <br>
+       <input type="text" [value]="firstName" name="" id="">
+       <br>
+       <input type="text" [placeholder]="myPlaceholder" name="" id="">
+       <br>
+       <div [class]="div1ClassName" style="height: 100px;width: 100px;">
+       </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        3.Event Binding
+        <br>
+        <button class="btn btn-success" (click)= "showwelcomeMessage()">
+            Show Welcome Message
+        </button>
+    </div>
+    <div class="col-3">
+        <select (change)= "onCityChange()">
+            <option value="Douala">Douala</option>
+            <option value="Kyiv">Kyiv</option>
+            <option value="Nurnberg">Nurnberg</option>
+        </select>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-3">
+        <input type="text" [(ngModel)]="firstName">
+    </div>
+    <div class="col-3">
+        <select [(ngModel)] = "selectedCity">
+            <option value="Douala">Douala</option>
+            <option value="Kyiv">Kyiv</option>
+            <option value="Nurnberg">Nurnberg</option>
+        </select>
+        -{{selectedCity}}
+    </div>
+</div>
